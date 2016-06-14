@@ -48,4 +48,4 @@ p5chrome# Typing tones examples
 
 ## Resources
 * Sounds - [sfx](http://s-f-x.xyz/)
-* Code samples - [p5 sound]()
+* Code samples - [p5 sound](https://p5js.org/reference/#/libraries/p5.sound)

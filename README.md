@@ -1,4 +1,4 @@
-chrome# Typing tones examples
+p5chrome# Typing tones examples
 
 ## Overview - 2 min each
 * the awesomeness of p5 and javascript
@@ -8,6 +8,8 @@ chrome# Typing tones examples
   *
   *
 * What shall we cover today?
+* By the end of today.. we can !
+  * Be awesome sauce people
 
 ## Introductory Programming
 * Introduction to p5
@@ -42,3 +44,8 @@ chrome# Typing tones examples
 
 * make a band
 * jukebox - drop a 'penny' for a song
+
+
+## Resources
+* Sounds - [sfx](http://s-f-x.xyz/)
+* Code samples - [p5 sound]()

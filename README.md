@@ -1,4 +1,4 @@
-p5chrome# Typing tones examples
+# Typing tones examples
 
 ## Overview - 2 min each
 * the awesomeness of p5 and javascript
@@ -44,8 +44,9 @@ p5chrome# Typing tones examples
 
 * make a band
 * jukebox - drop a 'penny' for a song
-
+* Use (p5.gibber)[http://charlie-roberts.com/gibber/p5-gibber/]
 
 ## Resources
 * Sounds - [sfx](http://s-f-x.xyz/)
 * Code samples - [p5 sound](https://p5js.org/reference/#/libraries/p5.sound)
+* https://github.com/therewasaguy/p5-music-viz/blob/gh-pages/README.md

@@ -698,3 +698,122 @@ We can tweak this to make it a radial analyzer with some colours quite easily.
       }
 
     }
+
+
+
+### Recording with mic
+
+Let's start with a basic setup to record.
+Two buttons - one which records while it is pressed and another that plays back the recording.
+
+    var recordButton, playButton;
+
+    function setup() {
+      recordButton = createButton('Record');
+      recordButton.position(10,10);
+      recordButton.mousePressed(startRecord);
+      recordButton.mouseReleased(stopRecord);
+      playButton = createButton('Play');
+      playButton.position(10,30);
+      playButton.mousePressed(play);
+    }
+
+    function draw() {
+
+    }
+
+    function startRecord() {
+      print('start recording');
+    }
+
+    function stopRecord() {
+      print('stop recording');
+    }
+
+    function play() {
+      print('playing');
+    }
+
+Now, to actually create a mic and start recording into a file we need to create 3 p5 objects `p5.AudioIn` for the mic component, `p5.SoundRecorder` to record the input and  `p5.SoundFile` to hold the recorded file.
+
+    var recordButton, playButton;
+    var mic, recorder, sound;
+
+    function setup() {
+      recordButton = createButton('Record');
+      recordButton.position(10,10);
+      recordButton.mousePressed(startRecord);
+      recordButton.mouseReleased(stopRecord);
+      playButton = createButton('Play');
+      playButton.position(10,30);
+      playButton.mousePressed(play);
+
+      mic = new p5.AudioIn();
+      mic.start();
+
+      recorder = new p5.SoundRecorder();
+      recorder.setInput(mic);
+
+      sound = new p5.SoundFile();
+    }
+
+    function draw() {
+
+    }
+
+    function startRecord() {
+      print('start recording');
+    }
+
+    function stopRecord() {
+      print('stop recording');
+    }
+
+    function play() {
+      print('playing');
+    }
+
+Now, we have to add functionalities into `startRecord()` `stopRecord()` and `play()`  and voila!
+
+    var recordButton, playButton;
+    var mic, recorder, sound;
+
+    function setup() {
+      recordButton = createButton('Record');
+      recordButton.position(10,10);
+      recordButton.mousePressed(startRecord);
+      recordButton.mouseReleased(stopRecord);
+      playButton = createButton('Play');
+      playButton.position(10,30);
+      playButton.mousePressed(play);
+
+      mic = new p5.AudioIn();
+      mic.start();
+
+      recorder = new p5.SoundRecorder();
+      recorder.setInput(mic);
+
+      sound = new p5.SoundFile();
+    }
+
+    function draw() {
+
+    }
+
+    function startRecord() {
+      print('start recording');
+      sound = new p5.SoundFile();
+      recorder.record(sound);
+
+    }
+
+    function stopRecord() {
+      print('stop recording');
+      recorder.stop();
+    }
+
+    function play() {
+      print('playing');
+      sound.amp(1);
+      sound.play();
+    }
